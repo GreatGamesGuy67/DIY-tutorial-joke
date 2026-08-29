@@ -1,8 +1,34 @@
 //=====================buttons===============================================
 /**
  * functions.js
- * Dynamic navigation routines using global configuration variables
+ * Dynamic navigation routines using bootstrap.json configuration
  */
+
+let siteConfig = null;
+
+/**
+ * Loads bootstrap.json and caches the configuration
+ */
+async function loadSiteConfig() {
+    if (siteConfig) return siteConfig; // Return cached config
+    
+    try {
+        const response = await fetch('./config/bootstrap.json');
+        siteConfig = await response.json();
+        return siteConfig;
+    } catch (error) {
+        console.error('Failed to load bootstrap.json:', error);
+        return { tutorials: [] };
+    }
+}
+
+/**
+ * Gets the total number of tutorials from bootstrap.json
+ */
+async function getTotalTutorials() {
+    const config = await loadSiteConfig();
+    return config.tutorials ? config.tutorials.length : 4; // Fallback to 4
+}
 
 function getCurrentTutorialNumber() {
     const currentPath = window.location.pathname;
@@ -14,12 +40,11 @@ function getCurrentTutorialNumber() {
 }
 
 /**
- * Directs the browser forward to the next tutorial page based on global vars.
+ * Directs the browser forward to the next tutorial page based on bootstrap.json
  */
-function navigateToNextTutorial() {
+async function navigateToNextTutorial() {
     const currentNum = getCurrentTutorialNumber();
-    // Safely reads the values directly from the global SiteConfig object
-    const totalCap = SiteConfig ? SiteConfig.maxTutorials : 5;
+    const totalCap = await getTotalTutorials();
     
     if (currentNum < totalCap) {
         window.location.href = `tut${currentNum + 1}.html`;
@@ -29,11 +54,11 @@ function navigateToNextTutorial() {
 }
 
 /**
- * Directs the browser backward to the previous tutorial page based on global vars.
+ * Directs the browser backward to the previous tutorial page based on bootstrap.json
  */
-function navigateToPreviousTutorial() {
+async function navigateToPreviousTutorial() {
     const currentNum = getCurrentTutorialNumber();
-    const totalCap = SiteConfig ? SiteConfig.maxTutorials : 5;
+    const totalCap = await getTotalTutorials();
     
     if (currentNum > 1) {
         window.location.href = `tut${currentNum - 1}.html`;
