@@ -5,7 +5,7 @@
 
 window.SiteConfig = {
     // Total number of tutorials currently active in your main/ directory
-    maxTutorials: 4,
+    maxTutorials: 7,
     
     // Aesthetic color schemes used for UI borders and text rendering
     themeColors: {
