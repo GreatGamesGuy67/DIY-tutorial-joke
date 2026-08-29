@@ -35,10 +35,17 @@
     },
     {
       "id": 5,
-      "title": "YOUR TUTORIAL TITLE HERE",
+      "title": "DIY Homemade Desktop Particle Accelerator",
       "path": "tut5.html",
       "status": "complete",
-      "accentColor": "#fbbf24"
+      "accentColor": "#06b6d4"
+    },
+    {
+      "id": 6,
+      "title": "DIY Homemade 6-Passenger Ultra-Light Airplane",
+      "path": "tut6.html",
+      "status": "complete",
+      "accentColor": "#ec4899"
     }
   ]
 }
