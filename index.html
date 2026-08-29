@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation Viewer</title>
+    <style>
+        /* Base system sizing reset */
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: #0f172a;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        /* Full screen background display workspace frame */
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
+        }
+
+        /* Minecraft-style status effect button grid placement */
+        .status-effect-container {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            z-index: 1000; 
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 8px;
+        }
+
+        /* Floating interaction trigger indicator badge */
+        .effect-badge {
+            background-color: rgba(15, 23, 42, 0.9);
+            border: 2px solid #f43f5e;
+            box-shadow: 4px 4px 0px #020617;
+            padding: 8px 12px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            user-select: none;
+            transition: transform 0.1s ease;
+        }
+
+        .effect-badge:hover {
+            transform: scale(1.05);
+            background-color: rgba(30, 41, 59, 0.95);
+        }
+
+        .effect-icon {
+            width: 16px;
+            height: 16px;
+            background-color: #f43f5e;
+            border-radius: 50%;
+            box-shadow: 0 0 8px #f43f5e;
+            animation: pulse 1.5s infinite;
+        }
+
+        .effect-label {
+            color: #f43f5e;
+            font-weight: bold;
+            font-size: 0.85em;
+            letter-spacing: 1px;
+        }
+
+        /* Background Dimmer Layer for Popup Overlay */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(2, 6, 17, 0.95);
+            z-index: 2000; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Centered On-Screen Popup Box layout window */
+        .modal-popup-box {
+            background-color: #0f172a;
+            border: 2px solid #f43f5e;
+            box-shadow: 8px 8px 0px #020617;
+            border-radius: 6px;
+            width: 90%;
+            max-width: 550px;
+            padding: 25px;
+            color: #94a3b8;
+            font-size: 0.8em;
+            line-height: 1.6;
+            position: relative;
+        }
+
+        .modal-header {
+            color: #f43f5e;
+            font-weight: bold;
+            font-size: 1.1em;
+            border-bottom: 1px dashed #f43f5e;
+            padding-bottom: 10px;
+            margin-top: 0;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+
+        /* Container allowing paragraph items to scale comfortably inside the popup box */
+        .modal-content-scroll {
+            max-height: 40vh;
+            overflow-y: auto;
+            padding-right: 5px;
+            margin-bottom: 20px;
+        }
+
+        /* Style format for each custom paragraph item added */
+        .modal-content-scroll p {
+            margin: 0 0 15px 0;
+        }
+        .modal-content-scroll p:last-child {
+            margin: 0;
+        }
+
+        /* Interactive Checkbox Layout Section */
+        .checkbox-container {
+            border-top: 1px dashed #475569;
+            padding-top: 15px;
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .checkbox-row {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .checkbox-row input {
+            margin-top: 4px;
+            cursor: pointer;
+        }
+
+        .checkbox-label {
+            color: #cbd5e1;
+            font-size: 0.95em;
+        }
+
+        /* Action Buttons Area */
+        .modal-actions {
+            display: flex;
+            justify-content: flex-end;
+            gap: 15px;
+            border-top: 1px dashed #475569;
+            padding-top: 15px;
+        }
+
+        .btn-ui {
+            padding: 8px 18px;
+            font-family: 'Courier New', monospace;
+            font-weight: bold;
+            border-radius: 4px;
+            cursor: pointer;
+            box-shadow: 2px 2px 0px #020617;
+            transition: all 0.1s ease;
+        }
+
+        .btn-confirm {
+            background-color: #10b981;
+            color: #ffffff;
+            border: none;
+        }
+        .btn-confirm:disabled {
+            background-color: #334155;
+            color: #64748b;
+            cursor: not-allowed;
+            box-shadow: none;
+        }
+
+        .btn-close {
+            background-color: #f43f5e;
+            color: #ffffff;
+            border: none;
+        }
+        .btn-close:disabled {
+            background-color: #334155;
+            color: #64748b;
+            cursor: not-allowed;
+            box-shadow: none;
+            opacity: 0.3;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 0.6; }
+            50% { opacity: 1; }
+            100% { opacity: 0.6; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main site interactive iframe node template element -->
+    <iframe src="main/tut1.html" name="main_frame" id="site_frame"></iframe>
+
+    <!-- Floating status UI layout box wrapper -->
+    <div class="status-effect-container">
+        <!-- Clicking the status effect badge directly triggers the full screen popup layout view -->
+        <div class="effect-badge" onclick="openWaiverModal(false)">
+            <div class="effect-icon"></div>
+            <span class="effect-label">SATIRE WAIVER II</span>
+        </div>
+    </div>
+
+    <!-- On-Screen Popup Window Overlay Structure -->
+    <div id="waiver-modal-layer" class="modal-overlay">
+        <div class="modal-popup-box">
+            
+            <h3 class="modal-header">⚠️ OMNIBUS LIABILITY WAIVER REQUIRED</h3>
+            
+            <div class="modal-content-scroll">
+                <p>
+                    <strong>Section 1 (Explosive Parody):</strong> Any guides detailing subatomic assembly procedures using hardware store inventory elements, cardboard matrices, or school adhesive configurations are physically impossible parodies. <strong>Cardboard</strong> and <strong>elmer's glue</strong> are completely incapable of initiating or containing high-energy physics events.
+                </p>
+                <p>
+                    <strong>Section 2 (Costume Standard):</strong> Defensive apparel mockups incorporating thin lead foils, trash linings, or string loops are tailored strictly for cinematic costuming or worldbuilding mockups. They deliver zero protective insulation utility against real-world biological threats or heavy debris.
+                </p>
+                <p>
+                    <strong>Section 3 (Absolute Indemnity):</strong> By reading this frame execution grid system, you agree that authors hold absolute immunity regarding mechanical failures, workplace mess, glue spills, or project execution failures.
+                </p>
+                <!-- Add new <p> paragraphs here later -->
+            </div>
+
+            <!-- Mandatory User Checkboxes -->
+            <div class="checkbox-container">
+                <label class="checkbox-row">
+                    <input type="checkbox" id="chk-consent" onchange="validateRequiredCheckboxes()">
+                    <span class="checkbox-label">I acknowledge and give my <strong>consent</strong> to the platform terms of use.</span>
+                </label>
+                <label class="checkbox-row">
+                    <input type="checkbox" id="chk-guardian" onchange="validateRequiredCheckboxes()">
+                    <span class="checkbox-label">My <strong>legal guardian</strong> has read and consented to these parody records.</span>
+                </label>
+                <label class="checkbox-row">
+                    <input type="checkbox" id="chk-serious" onchange="validateRequiredCheckboxes()">
+                    <span class="checkbox-label">I promise I <strong>wont take it serious</strong> or try this at home.</span>
+                </label>
+            </div>
+
+            <!-- Modal Action Buttons Layout -->
+            <div class="modal-actions">
+                <button id="btn-modal-close" class="btn-ui btn-close" onclick="closeWaiverModal()" type="button" disabled>CLOSE</button>
+                <button id="btn-modal-confirm" class="btn-ui btn-confirm" onclick="confirmWaiverModal()" type="button" disabled>CONFIRM</button>
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- Interface Navigation Logic Scripts -->
+    <script>
+        // Check if this is the first execution instance inside the current browser lifecycle session
+        window.addEventListener('DOMContentLoaded', (event) => {
+            if (!sessionStorage.getItem('waiver_acknowledged')) {
+                // Force open the overlay block structure as a mandatory gate record
+                openWaiverModal(true);
+            }
+        });
+
+        function openWaiverModal(isFirstTimeGate) {
+            var overlay = document.getElementById("waiver-modal-layer");
+            var closeBtn = document.getElementById("btn-modal-close");
+            var confirmBtn = document.getElementById("btn-modal-confirm");
+            
+            overlay.style.display = "flex";
+
+            if (isFirstTimeGate) {
+                // Lock out interaction hooks until checks match
+                closeBtn.disabled = true;
+                confirmBtn.disabled = true;
+                resetCheckboxes(false);
+            } else {
+                // Checked status path: Allow the close loop option instantly when accessed from status icon
+                closeBtn.disabled = false;
+                confirmBtn.disabled = true;
+                resetCheckboxes(true); // Automatically pre-fills confirmation checks for ease of review
+            }
+        }
+
+        function validateRequiredCheckboxes() {
+            var c1 = document.getElementById("chk-consent").checked;
+            var c2 = document.getElementById("chk-guardian").checked;
+            var c3 = document.getElementById("chk-serious").checked;
+            
+            // Confirm requires all criteria checks to run as true
+            document.getElementById("btn-modal-confirm").disabled = !(c1 && c2 && c3);
+        }
+
+        function confirmWaiverModal() {
+            // Write validation persistence flag token record to current active session storage index
+            sessionStorage.setItem('waiver_acknowledged', 'true');
+            document.getElementById("waiver-modal-layer").style.display = "none";
+        }
+
+        function closeWaiverModal() {
+            var closeBtn = document.getElementById("btn-modal-close");
+            // Safety confirmation check loop logic execution step
+            if (!closeBtn.disabled) {
+                document.getElementById("waiver-modal-layer").style.display = "none";
+            }
+        }
+
+        function resetCheckboxes(checkAllStatusValue) {
+            document.getElementById("chk-consent").checked = checkAllStatusValue;
+            document.getElementById("chk-guardian").checked = checkAllStatusValue;
+            document.getElementById("chk-serious").checked = checkAllStatusValue;
+        }
+        
+        // Safety execution fallback overlay window handler hook context block
+        window.onclick = function(event) {
+            var overlay = document.getElementById("waiver-modal-layer");
+            var closeBtn = document.getElementById("btn-modal-close");
+            // Backdrop clicking only processes if closing privileges are currently active
+            if (event.target == overlay && !closeBtn.disabled) {
+                overlay.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>
