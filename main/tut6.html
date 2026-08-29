@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIY Ultra-Light Aircraft Project</title>
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #0f172a;
+            color: #38bdf8;
+            line-height: 1.6;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1 {
+            color: #ec4899;
+            text-align: center;
+            border-bottom: 2px dashed #ec4899;
+            padding-bottom: 10px;
+        }
+        .warning-box {
+            background-color: #701a75;
+            border: 2px solid #ec4899;
+            color: #fff;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        .materials-list {
+            background-color: #1e293b;
+            padding: 20px;
+            border-radius: 5px;
+            border-left: 5px solid #ec4899;
+        }
+        .step {
+            background-color: #1e293b;
+            margin: 20px 0;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        .step-title {
+            color: #fbbf24;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.8em;
+            color: #64748b;
+        }
+
+        /* Ambient Cockpit Wind Animation Overlay */
+        .wind-blast {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #ffffff;
+            z-index: 9999;
+            pointer-events: none;
+            opacity: 0;
+        }
+
+        .active-propulsion {
+            animation: wind-surge 0.5s ease-out;
+        }
+
+        @keyframes wind-surge {
+            0% { opacity: 0.8; filter: blur(2px); }
+            30% { opacity: 0.4; }
+            100% { opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Visual Propulsion Feedback Container -->
+    <div id="wind-flash" class="wind-blast"></div>
+
+    <h1>DIY Homemade 6-Passenger Ultra-Light Airplane</h1>
+
+    <div class="warning-box">
+        CRITICAL PERFORMANCE DATA: Maximum allowable structural weight limit is strictly capped at 650 pounds. To achieve lift velocity, all six passengers must weigh an average of 108 pounds. Bringing carry-on luggage or wearing heavy boots will induce immediate aerodynamic stall conditions.
+    </div>
+
+    <h2>Required Inventory</h2>
+    <div class="materials-list">
+        <ul>
+            <li><strong>Chassis Beams:</strong> Assorted lightweight wooden structural beams</li>
+            <li><strong>Fuselage Skin:</strong> Sheets of thin plywood & thick cardboard panels</li>
+            <li><strong>Propulsion Matrix:</strong> 4x Heavy-duty electric leafblowers</li>
+            <li><strong>Actuators:</strong> 2x Heavy-duty flap control motors (one per wing)</li>
+            <li><strong>Flight Computer:</strong> 1x Raspberry Pi 5 (8GB RAM configuration)</li>
+            <li><strong>Cockpit Controls:</strong> 1x USB flight joystick & 24x Mapping arcade buttons</li>
+            <li><strong>Navigation:</strong> 1x Magnetic compass & addressable LED strip lights</li>
+            <li><strong>Power Plant:</strong> 5x Heavy-duty high-capacity battery units</li>
+            <li><strong>Landing Gear:</strong> 3x Industrial rubber utility wheels</li>
+            <li><strong>Canopy Shield:</strong> Clear plastic segments cut from a storage bin</li>
+            <li><strong>Adhesive Core:</strong> 1x Tube of Gorilla Glue, industrial superglue, and Elmer's glue</li>
+            <li><strong>Sealant Binding:</strong> 1x Roll of Gorilla Tape, clear tape, and shiny tinfoil wrapping</li>
+            <li><strong>Tool Suite:</strong> 1x Pair of heavy craft scissors & 1x Box cutter</li>
+        </ul>
+    </div>
+
+    <h2>Assembly Guide</h2>
+
+    <div class="step">
+        <div class="step-title">Step 1: The Main Spine Airframe</div>
+        <p>Lay out your lightweight wooden beams on a flat surface to form the basic structural backbone and fuselage cage. Bond the core timber joints securely using Gorilla Glue and clamp them tight until dry. Wrap all major load-bearing nodes in multiple layers of heavy-duty Gorilla Tape to absorb raw vibrational stress.</p>
+    </div>
+
+    <div class="step">
+        <div class="step-title">Step 2: Wingspan Geometry and Flap Mounts</div>
+        <p>Construct a sweeping triangular wingspan framework extending outward from your center wooden spine. Secure the cross-beams using structural superglue. At the trailing edge of each wing, carve out a dedicated slot using your box cutter to accommodate your moving wing flap sections later.</p>
+    </div>
+
+    <div class="step">
+        <div class="step-title">Step 3: Skinning the Hull and Tinfoil Aerospace Sheen</div>
+        <p>Slice your thick cardboard panels and thin plywood sheets into uniform aerodynamic outer body segments. Apply a foundational coat of Elmer's glue to fix the panels across your wooden airframe skeleton. Once dry, completely cover the exterior hull in high-gloss tinfoil using clear tape to give the fuselage an authentic metallic finish.</p>
+    </div>
+
+    <div class="step">
+        <div class="step-title">Step 4: Landing Gear Installation</div>
+        <p>Flip the airframe assembly onto its underside. Fix two of your industrial rubber utility wheels to the front left and right structural beams to establish a stable track. Bolt the final remaining wheel directly underneath the tail section to complete your 3-wheel landing gear array.</p>
+    </div>
+
+    <div class="step">
+        <div class="step-title">Step 5: Cockpit Canopy Fabrication</div>
+        <p>Take your clear plastic storage bin and carefully extract a wide, scratch-resistant windshield arc using your heavy craft scissors. Place the clear panel directly over the pilot seating threshold. Anchor it firmly to the cardboard hull using multiple overlapping layers of weather-resistant Gorilla Tape.</p>
+    </div>
+
+    <div class="step">
+        <div class="step-title">Step 6: Flap Motor Mechanical Calibration</div>
+        <p>Mount your 2 heavy-duty motors directly onto the trailing wing slots using industrial superglue. Attach rigid cardboard panels to the motor rotational pins to function as your active left and right control flaps. Ensure both moving joints can tilt freely without rubbing against the main wing structure.</p>
+    </div>
+
+    <div class="step">
+        <div class="step-title">Step 7: Wiring the 24-Button Flight Deck</div>
+        <p>Mount your traditional magnetic compass in the exact dead center of your custom dashboard panel. Arrange your 24 arcade mapping buttons and USB joystick onto a cardboard deck interface. Route the extensive bundle of assorted copper wires from each control element cleanly into the GPIO pins of your 8GB Raspberry Pi 5.</p>
+    </div>
+
+    <div class="step">
+        <div class="step-title">Step 8: Harnessing the Leafblower Engine Relays</div>
+        <p>Mount the 4 heavy-duty electric leafblowers symmetrically across the rear wing profile. Secure them tightly using a combination of industrial epoxy and heavy-duty tape straps. Run their collective throttle control lines into a unified power relay block connected directly to your 5 heavy-duty high-capacity batteries.</p>
+    </div>
+
+    <div class="step">
+        <div class="step-title">Step 9: Launch Engine Synchronization and Celebration</div>
+        <p>Boot up your 8GB Raspberry Pi 5. Run your custom Python script to map the joystick inputs to your wing flap motors and initialize your cabin LED strip lights. Push the throttle link forward to engage all 4 leafblowers at full power, track your magnetic compass straight down the center line, and celebrate—your 650-pound maximum capacity aircraft is ready!</p>
+    </div>
+
+    <!-- Hardware Simulation Testing Area -->
+    <div style="text-align: center; margin: 30px 0; padding: 15px; border: 1px dashed #ec4899; background-color: #1e293b; border-radius: 5px;">
+        <p style="margin: 0 0 10px 0; font-size: 0.9em; font-weight: bold; color: #fbbf24;">[FLIGHT CONSOLE INPUT PANEL: PROPULSION INTERFACE]</p>
+        <button onclick="engageLeafblowers()" style="background-color: #ec4899; color: #ffffff; border: none; padding: 10px 20px; font-family: 'Courier New', monospace; font-weight: bold; border-radius: 4px; cursor: pointer; box-shadow: 2px 2px 0px #020617;">
+            🌪️ ENGAGE ALL FOUR REAR LEAFBLOWERS
+        </button>
+    </div>
+
+    <!-- Navigation Buttons Section -->
+    <div style="display: flex; gap: 15px; justify-content: space-between; margin-top: 30px; padding-top: 20px; border-top: 1px dashed #ec4899;">
+        
+        <a href="tut5.html" style="text-decoration: none;">
+            <button type="button" style="background-color: #1e293b; color: #ec4899; border: 2px solid #ec4899; padding: 12px 24px; border-radius: 5px; font-family: 'Courier New', monospace; font-weight: bold; cursor: pointer;">
+                &lt; Previous Tutorial
+            </button>
+        </a>
+
+        <div style="width: 150px;"></div> <!-- Grand Finale Node End -->
+
+    </div>
+
+    <div class="footer">
+        Tutorial 6 - Homebuilt Aerospace Crafting Matrix. Max weight 650lbs. Clear the runway before initializing thrust relays.
+    </div>
+
+    <script>
+        function engageLeafblowers() {
+            var windLayer = document.getElementById("wind-flash");
+            windLayer.classList.remove("active-propulsion");
+            void windLayer.offsetWidth; // Force layout thread recalculation
+            windLayer.classList.add("active-propulsion");
+        }
+    </script>
+
+</body>
+</html>
