@@ -2,15 +2,109 @@
 
 Copyright (c) 2026 GreatGamesGuy67
 
-## 1. Project Purpose & Scope
-This repository houses fictional narrative content, worldbuilding mockups, and front-end interface layouts (such as the "DIY Over-Engineered Cybernetic Cup Holder" series). All step-by-step assembly guides, hardware combinations, and project descriptions contained within these files are strictly for entertainment, comedic effect, and portfolio demonstration. 
+---
 
-## 2. Permitted Use
-Users are permitted to view, analyze, and fork the source code to study the user interface mechanics, CSS layouts, and web development implementation strategies. 
+## Overview
 
-## 3. Mandatory Safety Restrictions
-* **No Real-World Testing for Tutorial 2:** Users explicitly agree that they will not attempt to assemble, source materials for, or construct the physically impossible and non-functional desktop parody device described in Tutorial 2.
-* **No Platform Misuse:** This content may not be used to spread real-world safety misinformation, generate deceptive threats, or violate hosting platform terms of service.
+This repository contains fictional narratives, design mockups, and front-end user interface layouts for humorous, satirical, and non-functional projects (such as the "DIY Over-Engineered Cybernetic Cup Holder" series and related tutorials). 
 
-## 4. Absolute Limitation of Liability
-THE SOFTWARE, DESIGN FILES, AND FICTIONAL DOCUMENTATION ARE PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES, ACCIDENTS, OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT, OR OTHERWISE, ARISING FROM, OUT OF, OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE CREATIVE CONTENT.
+**This content is intended for entertainment and educational purposes only.** This license governs how you may legally use, modify, and share this work.
+
+---
+
+## 1. Permitted Use
+
+You are permitted to:
+
+- **View** the source code and design files
+- **Study** the user interface mechanics, CSS layouts, and web development implementation strategies
+- **Fork** this repository for educational or personal projects
+- **Analyze** the code structure and front-end architecture
+- **Create derivative works** for satire, education, or entertainment purposes, provided you comply with the restrictions below
+
+---
+
+## 2. Mandatory Safety & Responsibility Restrictions
+
+By using this repository, you explicitly agree to the following:
+
+### 2.1 No Real-World Implementation
+Users will **not** attempt to:
+- Physically assemble or construct any projects described in this repository
+- Source real materials based on the fictional designs
+- Test or validate these designs in the real world
+- Treat satirical safety warnings as actual safety guidance
+
+The designs in this repository are intentionally absurd, physically impossible, non-functional, and presented as parody. They are **not** genuine engineering documentation.
+
+### 2.2 No Platform or Information Misuse
+This content may not be used to:
+- Spread real-world safety misinformation or false medical/technical claims
+- Generate deceptive threats or harassing content
+- Violate GitHub's Terms of Service or any hosting platform's policies
+- Mislead others into believing fictional content is real or functional
+- Create content that could cause harm if someone acted upon it
+
+### 2.3 Attribution
+If you create derivative works or reuse substantial portions of this code, you agree to:
+- Provide clear attribution to GreatGamesGuy67
+- Maintain the satirical context and disclaimer that the content is fictional
+
+---
+
+## 3. Limitation of Liability
+
+**THE SOFTWARE, DESIGN FILES, FICTIONAL DOCUMENTATION, AND ALL ASSOCIATED CONTENT ARE PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO:**
+
+- **Warranties of Merchantability** — This work is not guaranteed to be useful for any specific purpose
+- **Warranties of Fitness for a Particular Purpose** — The designs will not work and are not intended to
+- **Warranties of Non-Infringement** — We make no guarantees regarding intellectual property rights
+- **Warranties of Functionality** — These projects are intentionally non-functional parodies
+
+**IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR:**
+- Any direct, indirect, incidental, special, exemplary, or consequential damages
+- Loss of data, profits, business interruption, or any other damages arising from use of this content
+- Physical injury or property damage resulting from attempting to build or test the designs
+- Misinformation or confusion caused by the satirical nature of the content
+
+**You assume full responsibility and risk for any use of this material.**
+
+---
+
+## 4. License Grant
+
+This work is provided under a **Custom Creative Commons Attribution License with Restrictions**. 
+
+- **You may:** use, modify, and distribute the code for non-commercial, educational, or entertainment purposes
+- **You must:** attribute the original author (GreatGamesGuy67)
+- **You must:** include this full license with any derivative works
+- **You must:** maintain all safety disclaimers and restrictions
+- **You may not:** remove or obscure the satirical/fictional nature of the content
+- **You may not:** use this commercially without explicit written permission from the author
+
+---
+
+## 5. Definitions
+
+- **"Fictional Content"**: All narratives, designs, and instructions in this repository that are intentionally absurd, impossible, or non-functional for entertainment purposes
+- **"Tutorial"**: Step-by-step guides presented as satirical, humorous documentation
+- **"User"**: Any individual or organization accessing, viewing, or using this repository's content
+- **"Derivative Works"**: Modified versions, forks, or content based substantially on this repository
+
+---
+
+## 6. Severability
+
+If any portion of this license is found to be unenforceable, the remaining portions shall remain in full effect.
+
+---
+
+## 7. Contact & Permissions
+
+For questions about this license, derivative work permissions, or commercial use inquiries, please contact the author directly via GitHub.
+
+---
+
+**Last Updated:** August 29, 2026
+
+**Remember:** This is satire. Have fun learning web development, but don't build a cybernetic cup holder. ☕🤖
