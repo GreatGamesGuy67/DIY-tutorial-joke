@@ -8,7 +8,9 @@ function getCurrentTutorialNumber() {
     const currentPath = window.location.pathname;
     const filename = currentPath.substring(currentPath.lastIndexOf('/') + 1);
     const match = filename.match(/tut(\d+)\.html/);
-    return match ? parseInt(match, 10) : 1;
+    
+    // Correctly parses the captured numeric group from the regex array
+    return match ? parseInt(match[1], 10) : 1;
 }
 
 /**
