@@ -1,0 +1,37 @@
+{
+  "siteMetadata": {
+    "author": "GreatGamesGuy67",
+    "theme": "cybernetic-dark",
+    "activeWaiver": "SATIRE WAIVER II"
+  },
+  "tutorials": [
+    {
+      "id": 1,
+      "title": "DIY Hazmat Costume Prop Suite",
+      "path": "tut1.html",
+      "status": "complete",
+      "accentColor": "#ff3366"
+    },
+    {
+      "id": 2,
+      "title": "Desktop Nuclear Device Parody",
+      "path": "tut2.html",
+      "status": "archived-satire",
+      "accentColor": "#ff3366"
+    },
+    {
+      "id": 3,
+      "title": "DIY Over-Engineered Cybernetic Cup Holder",
+      "path": "tut3.html",
+      "status": "complete",
+      "accentColor": "#00ffff"
+    },
+    {
+      "id": 4,
+      "title": "DIY Real-Life Biometric HUD Glasses",
+      "path": "tut4.html",
+      "status": "complete",
+      "accentColor": "#00ffcc"
+    }
+  ]
+}
