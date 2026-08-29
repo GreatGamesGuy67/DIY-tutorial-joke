@@ -17,10 +17,15 @@ This repository contains fictional narratives, design mockups, and front-end use
 You are permitted to:
 
 - **View** the source code and design files
-- **Study** the user interface mechanics, CSS layouts, and web development implementation strategies
-- **Fork** this repository for educational or personal projects
-- **Analyze** the code structure and front-end architecture
-- **Create derivative works** for satire, education, or entertainment purposes, provided you comply with the restrictions below
+- **Study** the user interface mechanics, CSS layouts, and web development implementation strategies for educational purposes only
+- **Analyze** the code structure and front-end architecture in this repository
+
+**Explicitly NOT Permitted:**
+- **Forking** — You may not fork this repository
+- **Copying** — You may not copy, duplicate, or clone the code for any purpose
+- **Derivative Works** — You may not create derivative works, modified versions, or adaptations
+- **Redistribution** — You may not redistribute, republish, or repost this content anywhere
+- **Commercial Use** — You may not use this work commercially or for profit
 
 ---
 
@@ -45,10 +50,15 @@ This content may not be used to:
 - Mislead others into believing fictional content is real or functional
 - Create content that could cause harm if someone acted upon it
 
-### 2.3 Attribution
-If you create derivative works or reuse substantial portions of this code, you agree to:
-- Provide clear attribution to GreatGamesGuy67
-- Maintain the satirical context and disclaimer that the content is fictional
+### 2.3 No Theft or Unauthorized Use
+Users explicitly agree **not to:**
+- Copy code for use in their own projects without explicit written permission
+- Claim authorship or ownership of this work
+- Distribute this content on other platforms (GitHub, GitLab, personal websites, etc.)
+- Use this work as a base for commercial projects or products
+- Plagiarize or rebrand this content as their own
+
+Violations of this section may result in legal action and takedown notices.
 
 ---
 
@@ -71,40 +81,64 @@ If you create derivative works or reuse substantial portions of this code, you a
 
 ---
 
-## 4. License Grant
+## 4. Intellectual Property & Ownership
 
-This work is provided under a **Custom Creative Commons Attribution License with Restrictions**. 
+**All content in this repository is the exclusive intellectual property of GreatGamesGuy67.**
 
-- **You may:** use, modify, and distribute the code for non-commercial, educational, or entertainment purposes
-- **You must:** attribute the original author (GreatGamesGuy67)
-- **You must:** include this full license with any derivative works
-- **You must:** maintain all safety disclaimers and restrictions
-- **You may not:** remove or obscure the satirical/fictional nature of the content
-- **You may not:** use this commercially without explicit written permission from the author
+- All code, designs, narratives, and creative works are protected by copyright law
+- You retain **no ownership rights** by viewing this repository
+- **No implied license** is granted beyond the viewing rights explicitly stated in Section 1
+- Any unauthorized copying, modification, or distribution is a violation of copyright and may result in legal action
 
 ---
 
-## 5. Definitions
+## 5. Enforcement & Legal Action
+
+GreatGamesGuy67 reserves the right to:
+- Issue takedown notices (DMCA/similar) for unauthorized copies or derivative works
+- Pursue legal action against violators
+- Report copyright infringement to GitHub and other platforms
+- Seek damages for violations of this license
+
+GitHub users who fork, copy, or redistribute this work without permission may have their repositories removed and face account restrictions.
+
+---
+
+## 6. Definitions
 
 - **"Fictional Content"**: All narratives, designs, and instructions in this repository that are intentionally absurd, impossible, or non-functional for entertainment purposes
 - **"Tutorial"**: Step-by-step guides presented as satirical, humorous documentation
 - **"User"**: Any individual or organization accessing, viewing, or using this repository's content
 - **"Derivative Works"**: Modified versions, forks, or content based substantially on this repository
+- **"Unauthorized Copy"**: Any reproduction of this work without explicit written permission from GreatGamesGuy67
 
 ---
 
-## 6. Severability
+## 7. GitHub Repository Settings
+
+To enforce these restrictions, this repository is configured as:
+- **Private** or **Public (No Forking Allowed)** — GitHub's fork button is disabled
+- **Read-Only Access** — Users may view but not clone or copy
+- **Copyright Protection** — Monitored for unauthorized reproductions
+
+---
+
+## 8. Severability
 
 If any portion of this license is found to be unenforceable, the remaining portions shall remain in full effect.
 
 ---
 
-## 7. Contact & Permissions
+## 9. Contact & Permissions
 
-For questions about this license, derivative work permissions, or commercial use inquiries, please contact the author directly via GitHub.
+**To request permission** for any use not explicitly allowed in Section 1, contact:
+- **GitHub**: @GreatGamesGuy67
+- **Email**: pmatthias123@gmail.com
+
+**Unauthorized use will be prosecuted.**
 
 ---
 
 **Last Updated:** August 29, 2026
 
-**Remember:** This is satire. Have fun learning web development, but don't build a cybernetic cup holder. ☕🤖
+**Remember:** This is satire. View and enjoy learning, but hands off! No forking, copying, or stealing. ☕🤖🚫
