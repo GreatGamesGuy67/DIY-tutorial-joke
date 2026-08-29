@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>End of Tutorial Series - 404</title>
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #0f172a;
+            color: #38bdf8;
+            line-height: 1.6;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        h1 {
+            color: #f43f5e;
+            text-align: center;
+            border-bottom: 2px dashed #f43f5e;
+            padding-bottom: 10px;
+            font-size: 3em;
+        }
+        .container {
+            background-color: #1e293b;
+            border: 2px solid #f43f5e;
+            padding: 40px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .glitch-text {
+            color: #f43f5e;
+            font-weight: bold;
+            font-size: 2em;
+            margin: 20px 0;
+            letter-spacing: 2px;
+        }
+        .description {
+            color: #cbd5e1;
+            font-size: 1.1em;
+            margin: 20px 0;
+            line-height: 1.8;
+        }
+        .nav-section {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px dashed #f43f5e;
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .btn-ui {
+            padding: 12px 24px;
+            font-family: 'Courier New', monospace;
+            font-weight: bold;
+            border-radius: 4px;
+            cursor: pointer;
+            box-shadow: 2px 2px 0px #020617;
+            transition: all 0.1s ease;
+            border: none;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .btn-back {
+            background-color: #38bdf8;
+            color: #0f172a;
+        }
+        .btn-back:hover {
+            transform: scale(1.05);
+            box-shadow: 4px 4px 0px #020617;
+        }
+        .btn-home {
+            background-color: #10b981;
+            color: #ffffff;
+        }
+        .btn-home:hover {
+            transform: scale(1.05);
+            box-shadow: 4px 4px 0px #020617;
+        }
+        .footer {
+            margin-top: 40px;
+            color: #64748b;
+            font-size: 0.9em;
+        }
+        .ascii-art {
+            color: #fbbf24;
+            font-size: 0.9em;
+            margin: 20px 0;
+            white-space: pre;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>404</h1>
+        
+        <div class="glitch-text">END OF TUTORIAL SERIES</div>
+        
+        <div class="ascii-art">
+   .-..-. .-. .-. .-. .-.
+  ( {-. { {-  |  )-` `-'
+   '`-'` `-'  '  '     '
+        </div>
+        
+        <div class="description">
+            <p>🎉 Congratulations! 🎉</p>
+            <p>You've successfully completed all available DIY tutorials in the series.</p>
+            <p>Tutorial <span id="nextTutNum" style="color: #fbbf24; font-weight: bold;">???</span> does not exist yet.</p>
+            <p>More tutorials coming soon... or perhaps they're already being fabricated in some parallel dimension.</p>
+        </div>
+
+        <div class="nav-section">
+            <button class="btn-ui btn-back" onclick="goToPreviousTutorial()">← Back to Last Tutorial</button>
+            <a href="../index.html" class="btn-ui btn-home">Home</a>
+        </div>
+
+        <div class="footer">
+            <p>Keep checking back for new absurd DIY projects.</p>
+            <p>Or try to navigate to a future tutorial manually if you're feeling adventurous...</p>
+        </div>
+    </div>
+
+    <script>
+        // Auto-detect which tutorial number we're at and generate the "next" tutorial number
+        function detectTutorialNumber() {
+            // Get the current page URL
+            const currentUrl = window.location.href;
+            const urlParts = currentUrl.split('/');
+            const currentPage = urlParts[urlParts.length - 1];
+            
+            // Extract the tutorial number from the URL (e.g., tut7.html -> 7)
+            const tutorialMatch = currentPage.match(/tut(\d+)\.html/);
+            
+            if (tutorialMatch) {
+                const currentTutNum = parseInt(tutorialMatch[1]);
+                const nextTutNum = currentTutNum + 1;
+                document.getElementById('nextTutNum').textContent = nextTutNum;
+                return currentTutNum;
+            }
+            
+            // Fallback: default to showing 404 detection worked
+            document.getElementById('nextTutNum').textContent = '?';
+            return null;
+        }
+
+        function goToPreviousTutorial() {
+            const currentTutNum = detectTutorialNumber();
+            if (currentTutNum && currentTutNum > 1) {
+                window.location.href = `tut${currentTutNum}.html`;
+            } else {
+                // If we're at tut1 or can't detect, go home
+                window.location.href = '../index.html';
+            }
+        }
+
+        // Initialize on page load
+        window.addEventListener('DOMContentLoaded', detectTutorialNumber);
+    </script>
+
+</body>
+</html>
