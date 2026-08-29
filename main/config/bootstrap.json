@@ -24,14 +24,21 @@
       "title": "DIY Over-Engineered Cybernetic Cup Holder",
       "path": "tut3.html",
       "status": "complete",
-      "accentColor": "#00ffff"
+      "accentColor": "#a855f7"
     },
     {
       "id": 4,
       "title": "DIY Real-Life Biometric HUD Glasses",
       "path": "tut4.html",
       "status": "complete",
-      "accentColor": "#00ffcc"
+      "accentColor": "#10b981"
+    },
+    {
+      "id": 5,
+      "title": "YOUR TUTORIAL TITLE HERE",
+      "path": "tut5.html",
+      "status": "complete",
+      "accentColor": "#fbbf24"
     }
   ]
 }
