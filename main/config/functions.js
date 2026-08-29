@@ -19,7 +19,7 @@ function getCurrentTutorialNumber() {
 function navigateToNextTutorial() {
     const currentNum = getCurrentTutorialNumber();
     // Safely reads the values directly from the global SiteConfig object
-    const totalCap = SiteConfig ? SiteConfig.maxTutorials : 4;
+    const totalCap = SiteConfig ? SiteConfig.maxTutorials : 5;
     
     if (currentNum < totalCap) {
         window.location.href = `tut${currentNum + 1}.html`;
@@ -33,7 +33,7 @@ function navigateToNextTutorial() {
  */
 function navigateToPreviousTutorial() {
     const currentNum = getCurrentTutorialNumber();
-    const totalCap = SiteConfig ? SiteConfig.maxTutorials : 4;
+    const totalCap = SiteConfig ? SiteConfig.maxTutorials : 5;
     
     if (currentNum > 1) {
         window.location.href = `tut${currentNum - 1}.html`;
