@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIY Cyber-HUD Glasses Project</title>
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #0f172a;
+            color: #38bdf8;
+            line-height: 1.6;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1 {
+            color: #10b981;
+            text-align: center;
+            border-bottom: 2px dashed #10b981;
+            padding-bottom: 10px;
+        }
+        .warning-box {
+            background-color: #064e3b;
+            border: 2px solid #10b981;
+            color: #fff;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        .materials-list {
+            background-color: #1e293b;
+            padding: 20px;
+            border-radius: 5px;
+            border-left: 5px solid #10b981;
+        }
+        .step {
+            background-color: #1e293b;
+            margin: 20px 0;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        .step-title {
+            color: #fbbf24;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.8em;
+            color: #64748b;
+        }
+
+        /* Red High-Intensity Indicator Overlay */
+        .damage-flashbang {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #FF0000; /* Pure RGB (255, 0, 0) */
+            z-index: 9999;
+            pointer-events: none; /* Allows clicks to pass through the overlay */
+            opacity: 0;
+        }
+
+        /* Active Flash Trigger Class */
+        .trigger-flash {
+            animation: flashbang-sequence 0.4s ease-out;
+        }
+
+        @keyframes flashbang-sequence {
+            0% { opacity: 0.95; }
+            40% { opacity: 0.80; }
+            100% { opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Damage Flash Element Container -->
+    <div id="screen-flash" class="damage-flashbang"></div>
+
+    <h1>DIY Real-Life Biometric HUD Glasses</h1>
+
+    <div class="warning-box">
+        PROJECT LOG: Sensation indicators mapped to a retro graphical interface. This hardware relies on highly speculative data interpretation from external medical sensor patches. Do not mistake a blood sugar crash from skipped lunch for an actual in-game phantom attack.
+    </div>
+
+    <h2>Required Inventory</h2>
+    <div class="materials-list">
+        <ul>
+            <li><strong>Chassis Matrix:</strong> 1x Pair of plastic lab safety goggles or old glasses</li>
+            <li><strong>Optical Engine:</strong> 2x Micro transparent OLED display modules or small prisms</li>
+            <li><strong>Logic Control:</strong> 1x Raspberry Pi Zero 2 W (Compact HUD driver)</li>
+            <li><strong>Sensor Node:</strong> 4x Silver-chloride medical electrode patches with snap cables</li>
+            <li><strong>Biometric Interface:</strong> 1x Pulse oximeter & muscle sensor breakout board</li>
+            <li><strong>Power Plant:</strong> 1x Flat lithium-polymer battery pack (secured to head strap)</li>
+            <li><strong>Adhesive Bond:</strong> 1x Roll of electrical tape & thin copper wire</li>
+            <li><strong>Structural Core:</strong> 1x Tube of superglue & clear plastic strips</li>
+        </ul>
+    </div>
+
+    <h2>Assembly Guide</h2>
+
+    <div class="step">
+        <div class="step-title">Step 1: The Optical Prism Rig</div>
+        <p>Take your micro transparent displays and mount them to the inner upper rim of the safety goggles using superglue. Angle them slightly downward so the graphical data projects directly into your field of view without totally blocking your ability to see actual walls or furniture.</p>
+    </div>
+
+    <div class="step">
+        <div class="step-title">Step 2: Wiring the Bio-Sensor Array</div>
+        <p>Run the snap cables from your medical electrode patches along the frame of the glasses, securing them tightly with electrical tape. Leave enough slack so the cables can reach your neck and temple areas comfortably without pulling your ears back.</p>
+    </div>
+
+    <div class="step">
+        <div class="step-title">Step 3: Calibrating the Heart Matrix</div>
+        <p>Affix two electrode patches to your temples to measure skin conductance and pulse rate. Connect these inputs to your sensor breakout board. Write a Python script on the Raspberry Pi that translates a steady heartbeat into ten beautifully rendered red pixel hearts on your screen. If your pulse spikes because you ran up the stairs, the script drops you down to four hearts and sounds an alarm.</p>
+    </div>
+
+    <div class="step">
+        <div class="step-title">Step 4: The Hunger Algorithm Engine</div>
+        <p>Place the remaining two electrodes along your jawline or upper neck. The sensor board tracks tiny micro-voltages from muscle contractions (like swallowing or stomach-rumbling vibrations). The software correlates hours of zero jaw movement with a dropping food bar, slowly deleting the hunger shanks from your display until you chew something.</p>
+    </div>
+
+    <div class="step">
+        <div class="step-title">Step 5: Wiring the Intrusive Damage Feedback Loop</div>
+        <p>Program an interrupt function into your core script. If an electrode snaps off or registers an unexpected, chaotic spike in connection quality, the Raspberry Pi fires a full RGB (255, 0, 0) crimson display pulse directly into your retinas. This serves as an incredibly annoying, highly disruptive visual flashbang to mimic video game combat damage.</p>
+    </div>
+
+    <div class="step">
+        <div class="step-title">Step 6: System Initialization</div>
+        <p>Stick the patches to your skin, flip the battery toggle, and watch your vision populate with full-color health and food bars. Enjoy walking around your house experiencing the world like a video game character, trying to figure out exactly how many hunger points a slice of cold pizza will restore in real time.</p>
+    </div>
+
+    <!-- Hardware Simulation Testing Area -->
+    <div style="text-align: center; margin: 30px 0; padding: 15px; border: 1px dashed #10b981; background-color: #1e293b; border-radius: 5px;">
+        <p style="margin: 0 0 10px 0; font-size: 0.9em; font-weight: bold; color: #fbbf24;">[HARDWARE LAB MODE: EMULATE PERIPHERAL INPUT]</p>
+        <button onclick="simulateDamage()" style="background-color: #f43f5e; color: #fff; border: none; padding: 10px 20px; font-family: 'Courier New', monospace; font-weight: bold; border-radius: 4px; cursor: pointer; box-shadow: 2px 2px 0px #020617;">
+            ⚡ TRIPPED SENSOR OVERLOAD (TAKE DAMAGE)
+        </button>
+    </div>
+
+    <!-- Navigation Buttons Section -->
+    <div style="display: flex; gap: 15px; justify-content: space-between; margin-top: 30px; padding-top: 20px; border-top: 1px dashed #10b981;">
+        
+        <a href="tut3.html" style="text-decoration: none;">
+            <button type="button" style="background-color: #1e293b; color: #10b981; border: 2px solid #10b981; padding: 12px 24px; border-radius: 5px; font-family: 'Courier New', monospace; font-weight: bold; cursor: pointer;">
+                &lt; Previous Tutorial
+            </button>
+        </a>
+
+        <a href="tut5.html" style="text-decoration: none;">
+            <button type="button" style="background-color: #10b981; color: #0f172a; border: none; padding: 12px 24px; border-radius: 5px; font-family: 'Courier New', monospace; font-weight: bold; cursor: pointer;">
+                Next Tutorial &gt;
+            </button>
+        </a>
+
+    </div>
+
+    <div class="footer">
+        Tutorial 4 - Biometric Interface Mechanics. Remove adhesive patches slowly to avoid accidental eyebrow extraction.
+    </div>
+
+    <script>
+        function simulateDamage() {
+            var flashLayer = document.getElementById("screen-flash");
+            // Remove the class if it's already there to allow re-triggering
+            flashLayer.classList.remove("trigger-flash");
+            // Trigger reflow to restart the CSS animation cycle
+            void flashLayer.offsetWidth; 
+            // Apply the aggressive flash effect class
+            flashLayer.classList.add("trigger-flash");
+        }
+    </script>
+
+</body>
+</html>
