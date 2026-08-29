@@ -71,11 +71,23 @@
             animation: flashbang-sequence 0.4s ease-out;
         }
 
-        @keyframes flashbang-sequence {
-            0% { opacity: 0.95; }
-            40% { opacity: 0.80; }
-            100% { opacity: 0; }
+                @keyframes flashbang-sequence {
+            0% { 
+                opacity: 1.0; 
+                filter: brightness(1.5) contrast(2); /* Forces max pixel overdrive */
+            }
+            15% { 
+                background-color: #FFFFFF; /* Initial blinding white flash frame */
+                opacity: 1.0;
+            }
+            20% {
+                background-color: #FF0000; /* Instantly snaps back into solid crimson */
+            }
+            100% { 
+                opacity: 0; 
+            }
         }
+
     </style>
 </head>
 <body>
