@@ -46,6 +46,13 @@
       "path": "tut6.html",
       "status": "complete",
       "accentColor": "#ec4899"
+    },
+    {
+      "id": 7,
+      "title": "DIY Quantum-Grade Eternal Snack Preservation Matrix",
+      "path": "tut7.html",
+      "status": "complete",
+      "accentColor": "#ff7e00"
     }
   ]
 }
