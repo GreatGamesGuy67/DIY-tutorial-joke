@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIY Desktop Particle Accelerator Project</title>
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #0f172a;
+            color: #38bdf8;
+            line-height: 1.6;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1 {
+            color: #06b6d4;
+            text-align: center;
+            border-bottom: 2px dashed #06b6d4;
+            padding-bottom: 10px;
+        }
+        .warning-box {
+            background-color: #0e7490;
+            border: 2px solid #06b6d4;
+            color: #fff;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        .materials-list {
+            background-color: #1e293b;
+            padding: 20px;
+            border-radius: 5px;
+            border-left: 5px solid #06b6d4;
+        }
+        .step {
+            background-color: #1e293b;
+            margin: 20px 0;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        .step-title {
+            color: #fbbf24;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.8em;
+            color: #64748b;
+        }
+
+        /* Ambient Accelerator Glow Animation Overlay */
+        .accelerator-glow {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #06b6d4;
+            z-index: 9999;
+            pointer-events: none;
+            opacity: 0;
+        }
+
+        .active-beam {
+            animation: beam-pulse 0.6s ease-in-out;
+        }
+
+        @keyframes beam-pulse {
+            0% { opacity: 0.8; filter: blur(4px); }
+            50% { opacity: 0.3; }
+            100% { opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Visual Beam Feedback Container -->
+    <div id="beam-flash" class="accelerator-glow"></div>
+
+    <h1>DIY Homemade Desktop Particle Accelerator</h1>
+
+    <div class="warning-box">
+        PROJECT COMPLIANCE: Centralized kinetic velocity project. Sourcing standard cardboard chassis structures allows for flexible ring design without inducing localized structural collapse. Ensure battery terminals remain dry.
+    </div>
+
+    <h2>Required Inventory</h2>
+    <div class="materials-list">
+        <ul>
+            <li><strong>Chassis Matrix:</strong> Assorted cardboard sheets (dense corrugated grade)</li>
+            <li><strong>Deflection Guidance:</strong> Assorted thin metal sheets (soda can siding or tin foil)</li>
+            <li><strong>Visual Indicators:</strong> 2x High-intensity LED bulbs (for active beam simulation)</li>
+            <li><strong>Logic Control:</strong> 1x Raspberry Pi 3 (Overclocked sub-atomic processing unit)</li>
+            <li><strong>Power Core:</strong> 1x Bundle of AA battery packs with snap connectors</li>
+            <li><strong>Conduit Rails:</strong> 1x Bundle of copper connection wires</li>
+            <li><strong>Hardware:</strong> 1x Pair of scissors & heavy duct tape</li>
+        </ul>
+    </div>
+
+    <h2>Assembly Guide</h2>
+
+    <div class="step">
+        <div class="step-title">Step 1: The Circular Track Framework</div>
+        <p>Cut your cardboard sheets into long, uniform strips using your scissors. Form the strips into a large, hollow ring configuration roughly two feet in diameter. Use duct tape to seal the seams. This establishes the circular flight path for your theoretical sub-atomic elements.</p>
+    </div>
+
+    <div class="step">
+        <div class="step-title">Step 2: Magnetic Deflection Simulation</div>
+        <p>Cut your assorted metal sheets into small rectangular panels. Line the inner curved walls of your cardboard ring track with these metallic plates. The metal acts as a visual simulation layer for magnetic guidance fields, directing the hypothetical trajectory smoothly around corners.</p>
+    </div>
+
+    <div class="step">
+        <div class="step-title">Step 3: Integrating the Optical Indicators</div>
+        <p>Mount your 2 high-intensity LED bulbs at opposite ends of the circular track. Poke the terminal wires straight through the cardboard walls. Position the lenses so they shine directly down the barrel of the track, giving you clear optical feedback when the system is engaged.</p>
+    </div>
+
+    <div class="step">
+        <div class="step-title">Step 4: Programming the Velocity Logic</div>
+        <p>Boot up your Raspberry Pi 3. Write a Python loop script that alternatively supplies voltage to the GPIO output pins. Set the script timing to flash the two high-intensity LEDs back and forth rapidly, creating the illusion of a bright beam speeding around your cardboard ring track layout.</p>
+    </div>
+
+    <div class="step">
+        <div class="step-title">Step 5: Charging the Core Network</div>
+        <p>Wire your assorted copper connection lines from the AA battery packs directly into your circuit configuration. Tape the battery array to the center of the ring to serve as your stable desktop power core. Ensure all exposed wire splices are wrapped cleanly to avoid shorts.</p>
+    </div>
+
+    <div class="step">
+        <div class="step-title">Step 6: Running First Beam Synchronization</div>
+        <p>Launch your processing script on the Raspberry Pi 3. Watch the high-intensity LEDs begin to strobe around the metal-lined track framework. Adjust your code delays to increase the pulse speed until the flashing lights blend into a single continuous stream of simulated desktop energy.</p>
+    </div>
+
+    <!-- Hardware Simulation Testing Area -->
+    <div style="text-align: center; margin: 30px 0; padding: 15px; border: 1px dashed #06b6d4; background-color: #1e293b; border-radius: 5px;">
+        <p style="margin: 0 0 10px 0; font-size: 0.9em; font-weight: bold; color: #fbbf24;">[ACCELERATOR CONTROLS: RECONSTRUCT FIELD INJECTION]</p>
+        <button onclick="fireParticleBeam()" style="background-color: #06b6d4; color: #0f172a; border: none; padding: 10px 20px; font-family: 'Courier New', monospace; font-weight: bold; border-radius: 4px; cursor: pointer; box-shadow: 2px 2px 0px #020617;">
+            ⚛️ FIRE SIMULATED BEAM COLLISION
+        </button>
+    </div>
+
+    <!-- Navigation Buttons Section -->
+    <div style="display: flex; gap: 15px; justify-content: space-between; margin-top: 30px; padding-top: 20px; border-top: 1px dashed #06b6d4;">
+        
+        <a href="tut4.html" style="text-decoration: none;">
+            <button type="button" style="background-color: #1e293b; color: #06b6d4; border: 2px solid #06b6d4; padding: 12px 24px; border-radius: 5px; font-family: 'Courier New', monospace; font-weight: bold; cursor: pointer;">
+                &lt; Previous Tutorial
+            </button>
+        </a>
+
+        <div style="width: 150px;"></div> <!-- Terminal page end placeholder node -->
+
+    </div>
+
+    <div class="footer">
+        Tutorial 5 - Kinetic Deflection Physics Layout. No sub-atomic matter was accelerated during the compilation of this webpage.
+    </div>
+
+    <script>
+        function fireParticleBeam() {
+            var beamLayer = document.getElementById("beam-flash");
+            beamLayer.classList.remove("active-beam");
+            void beamLayer.offsetWidth; // Force layout thread recalculation 
+            beamLayer.classList.add("active-beam");
+        }
+    </script>
+
+</body>
+</html>
